@@ -13,7 +13,7 @@ export const useProductStore = defineStore("products", {
     },
     cartItems: (state) => state._cartItems || [],
     getCartItems: (state) => {
-      return state._allProducts;
+      return state._cartItems;
     },
   },
   actions: {
@@ -79,7 +79,7 @@ export const useProductStore = defineStore("products", {
         if(index !== -1) {
             this.cartItems[index].quantity -= 1;
             if(this.cartItems[index].quantity === 0){
-                this.cartItems = this.cartItems.filter(product => product.id !== item.id);
+                this._cartItems = this.cartItems.filter(product => product.id !== item.id);
             }
             Swal.fire({
                 position: 'top-end',
@@ -91,7 +91,7 @@ export const useProductStore = defineStore("products", {
         }
     },
     removeFromCart(item) {
-        this.cartItems = this.cartItems.filter(product => product.id !== item.id);
+        this._cartItems = this.cartItems.filter(product => product.id !== item.id);
         Swal.fire({
           position: 'top-end',
           icon: 'success',

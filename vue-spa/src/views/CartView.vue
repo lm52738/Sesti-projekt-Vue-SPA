@@ -24,14 +24,14 @@ const store = useProductStore();
                             <tr v-for="item in store.getCartItems" :key="item.id">
                                 <td>{{item.id}}</td>
                                 <td>
-                                    <img :src="item.image" 
+                                    <img :src="item.images[0]" 
                                     class="fluid rounded"
                                     width="60"
                                     height="60"    
-                                    :alt="item.name" />
+                                    :alt="item.title" />
                                 </td>
                                 <td>
-                                    {{item.name}}
+                                    {{item.title}}
                                 </td>
                                 <td>
                                     <i 
