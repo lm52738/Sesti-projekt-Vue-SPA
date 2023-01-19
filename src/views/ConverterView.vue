@@ -17,8 +17,8 @@ export default {
         kuna: 6.96,
         startedDateAt: new Date().toLocaleDateString("hr-HR"),
         startedTimeAt: new Date().toLocaleTimeString("hr-HR"),
-      }
+      },
     };
-  }
-}
+  },
+};
 </script>

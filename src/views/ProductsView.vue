@@ -7,10 +7,10 @@
       @product-updated="productUpdated"
     ></product-card>
   </div>
-  <div v-else >
+  <div v-else>
     <h2>All products ({{ allProducts.length }})</h2>
     <hr />
-    <div className='row my-4'>
+    <div className="row my-4">
       <product-card
         v-for="product in allProducts"
         :key="product.id"

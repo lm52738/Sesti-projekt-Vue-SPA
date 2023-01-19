@@ -26,7 +26,6 @@ const router = createRouter({
       path: "/converter",
       name: "converter",
       component: ConverterView,
-      
     },
     {
       path: "/:catchAll(.*)*",
@@ -35,6 +34,5 @@ const router = createRouter({
     },
   ],
 });
-
 
 export default router;
