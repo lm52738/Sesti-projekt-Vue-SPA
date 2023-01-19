@@ -1,7 +1,6 @@
 <template>
     <div class="d-flex justify-content-center p-5">
       <small-card>
-        <h3>Dear unknown user, please login</h3>
         <form @submit.prevent="login">
           <div class="form-group row">
             <label class="col-4 col-form-label">Login</label>
@@ -14,7 +13,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-center">
-            <button class="btn btn-success m-3" type="submit">Let me in!</button>
+            <button class="btn btn-primary m-3" type="submit">Let me in!</button>
           </div>
         </form>
       </small-card>

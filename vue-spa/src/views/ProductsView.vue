@@ -2,9 +2,9 @@
   <div v-if="selectedProduct" class="d-flex flex-column align-items-center">
     <h2>Product #{{ selectedProduct.id }}</h2>
     <product-card
-      :key="selectedProduct.id"
       :id="selectedProduct.id"
-      v-bind="selectedProduct"
+      can-edit="true"
+      @product-updated="productUpdated"
     ></product-card>
   </div>
   <div v-else >
@@ -15,7 +15,7 @@
         v-for="product in allProducts"
         :key="product.id"
         :id="product.id"
-        v-bind="product"
+        @product-updated="productUpdated"
       ></product-card>
     </div>
   </div>
@@ -45,6 +45,9 @@ export default {
       this.selectedProduct = this.allProducts.find(
         (x) => x.id == this.$route.params.id
       );
+    },
+    productUpdated(product) {
+      console.log("so now i know products rating is updated...", product);
     },
   },
   async mounted() {

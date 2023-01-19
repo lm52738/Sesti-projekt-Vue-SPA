@@ -21,9 +21,11 @@ const product = useProductStore();
                   <li class="nav-item">
                     <RouterLink class="nav-link" to="/cart"><i class="bi bi-cart-check"></i>({{product.cartItems.length}})</RouterLink>
                   </li>
+                  <li class="nav-item">
+                    <div class="nav-link" to="/cart"><i class="bi bi-people-fill"></i> {{ auth.username }}</div>
+                  </li>
               </ul>
           </div>
-          <div class="ml-5 h3">👥{{ auth.username }}</div>
       </div>
   </nav>
 </template>

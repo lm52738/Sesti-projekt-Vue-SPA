@@ -34,6 +34,13 @@ export const useProductStore = defineStore("products", {
         }
       }
     },
+    // update product's rating
+    updateProduct(product) {
+      console.log("updating products rating", product);
+      this._allProducts = this._allProducts.map((x) =>
+        x.id == product.id ? product : x
+      );
+    },
     // add product to cart (Swal library for alerts)
     addToCart(item) {
         let index = this.cartItems.findIndex(product => product.id === item.id);
