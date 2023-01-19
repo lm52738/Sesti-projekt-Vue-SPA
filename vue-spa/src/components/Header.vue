@@ -1,8 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { useAuthStore } from "../stores/auth";
 import { useProductStore } from "../stores/products";
-const auth = useAuthStore();
 const product = useProductStore();
 </script>
 
@@ -22,7 +20,7 @@ const product = useProductStore();
                     <RouterLink class="nav-link" to="/cart"><i class="bi bi-cart-check"></i>({{product.cartItems.length}})</RouterLink>
                   </li>
                   <li class="nav-item">
-                    <div class="nav-link" to="/cart"><i class="bi bi-people-fill"></i> {{ auth.username }}</div>
+                    <RouterLink class="nav-link" to="/converter"><i class="bi bi-currency-dollar"></i><i class="bi bi-arrow-right"></i><i class="bi bi-currency-euro"></i></RouterLink>
                   </li>
               </ul>
           </div>

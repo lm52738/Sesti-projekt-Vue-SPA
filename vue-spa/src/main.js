@@ -5,6 +5,7 @@ import App from "./App.vue";
 import router from "./router";
 import ProductCard from "./components/ProductCard.vue";
 import SmallCard from "./components/SmallCard.vue";
+import ConverterCard from "./components/ConverterCard.vue";
 
 import "./assets/main.css";
 
@@ -19,4 +20,5 @@ app.use(createPinia());
 app.use(router);
 app.component("product-card", ProductCard);
 app.component("small-card", SmallCard);
+app.component("dollar-converter", ConverterCard);
 app.mount("#app");
