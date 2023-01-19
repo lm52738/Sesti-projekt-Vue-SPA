@@ -3,6 +3,7 @@
     <h2>Product #{{ selectedProduct.id }}</h2>
     <product-card
       :key="selectedProduct.id"
+      :id="selectedProduct.id"
       v-bind="selectedProduct"
     ></product-card>
   </div>
@@ -13,6 +14,7 @@
       <product-card
         v-for="product in allProducts"
         :key="product.id"
+        :id="product.id"
         v-bind="product"
       ></product-card>
     </div>

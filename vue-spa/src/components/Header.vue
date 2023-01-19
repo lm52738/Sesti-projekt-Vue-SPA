@@ -1,7 +1,9 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { useAuthStore } from "../stores/auth";
-const store = useAuthStore();
+import { useProductStore } from "../stores/products";
+const auth = useAuthStore();
+const product = useProductStore();
 </script>
 
 <template>
@@ -17,11 +19,11 @@ const store = useAuthStore();
                     <RouterLink class="nav-link" aria-current="page" to="/">Home</RouterLink>
                   </li>
                   <li class="nav-item">
-                    <RouterLink class="nav-link" to="/cart"><i class="bi bi-cart-check"></i></RouterLink>
+                    <RouterLink class="nav-link" to="/cart"><i class="bi bi-cart-check"></i>({{product.cartItems.length}})</RouterLink>
                   </li>
               </ul>
           </div>
-          <div class="ml-5 h3">👥{{ store.username }}</div>
+          <div class="ml-5 h3">👥{{ auth.username }}</div>
       </div>
   </nav>
 </template>
