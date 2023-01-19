@@ -35,6 +35,7 @@ npm run lint
 ```
 
 interpolation/one-way binding - Da, src/components/ConverterCard.vue, :3,6,7 i src/views/ConverterView.vue, :5
+
 two-way binding - Da, src/components/ProductsCard.vue, :44
 methods - Da, src/components/ProductsCard.vue, :84 - 95
 computed properties - Da, src/views/ProductsView.vue, :28 - 30; src/components/ProductsCard.vue, :78 - 83
